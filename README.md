@@ -9,11 +9,11 @@ addition of the backend language Python and using framework Django to create and
 ## Contents 
 1. [Project](#project)
 2. [UX](#ux)
-       - (a) [User Stories](#UserStories)
-       - (b) [Admin Stories](#adminstories)
-       - (c) [Wireframes](#wireframes)
+       - (a) [User Stories](#UserStories)\
+       - (b) [Admin Stories](#adminstories)\
+       - (c) [Wireframes](#wireframes)\
 3. [Features](#features)
-       (a) [Development Modification](#devmod)
+       (a) [Development Modification](#devmod)\
 4. [Technologies](#tech)
 5. [Testing](#test)
 6. [Deployment](#deploy)
