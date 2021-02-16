@@ -17,6 +17,13 @@ body{
 
 .btn{
     font-size: 2em;
-    padding: 25px 10px 0px;
+    padding: 25px 5px 0px;
 }
 
+#logo{
+    object-fit: contain;
+    border: 2px solid black;
+    width:auto;
+  
+
+}
