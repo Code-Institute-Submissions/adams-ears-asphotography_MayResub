@@ -14,16 +14,35 @@ body{
   font-family: "Roboto Slab", sans-serif;
   color: blue;
 }
+/* Social Media */
 
 .btn{
     font-size: 2em;
     padding: 25px 5px 0px;
 }
 
+/* Logo */
+.logo-row{
+    padding-top: 20px;
+}
+
 #logo{
     object-fit: contain;
     border: 2px solid black;
     width:auto;
-  
+}
 
+
+/* Nav Bar */
+
+.vl{
+  border-left: 3px solid black;
+  height: 40px;
+}
+
+.nav-container{
+    width: auto;
+    padding-top: inherit;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 600;
 }
