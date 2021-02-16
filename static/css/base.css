@@ -46,3 +46,15 @@ body{
     font-family: "Roboto Slab", sans-serif;
     font-weight: 600;
 }
+.navbar-light .navbar-nav .nav-link{
+    color: black;
+}
+
+@media (max-width: 991px) {
+.vl{
+   display: none; 
+}
+.nav-container{
+    width: 1170px;
+}
+}
