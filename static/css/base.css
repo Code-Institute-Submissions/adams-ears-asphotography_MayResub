@@ -28,7 +28,7 @@ body{
 
 #logo{
     object-fit: contain;
-    border: 2px solid black;
+    border: 3px solid black;
     width:auto;
 }
 
@@ -57,4 +57,23 @@ body{
 .nav-container{
     width: 1170px;
 }
+
+}
+
+/* About */
+
+.portrow{
+    padding-top: 500px;
+}
+
+.portait{
+    background-color: white;
+    object-fit: contain;
+    padding:3px;
+    border: 3px solid black;
+    width:auto;
+    object-fit: contain;
+    display: block; 
+    max-width: 100%;
+    height: auto;
 }
