@@ -63,12 +63,12 @@ body{
 /* About */
 
 .portrow{
-    padding-top: 500px;
+    padding-top: 450px;
+    padding-bottom: 30px;
 }
 
 .portait{
     background-color: white;
-    object-fit: contain;
     padding:3px;
     border: 3px solid black;
     width:auto;
@@ -76,4 +76,15 @@ body{
     display: block; 
     max-width: 100%;
     height: auto;
+    position: relative;
+}
+
+.about-text{
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    font-size: 14px;
+    font-family: "Roboto Slab", sans-serif;
+    z-index: +1;
+    position: relative;
 }
