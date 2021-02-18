@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<form role="form" action="{% url 'contact' %}" method="POST">
+    {% csrf_token %}
+          <form class="cont-form" onsubmit="">
+
+          <!-- Name -->
+          <div class="form-group">
+            <input type="text" class="form-control" name="name" id="InputName" aria-describedby="nameHelp" placeholder="Name:" required/>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <input type="email" class="form-control" name="emailaddress" id="email" aria-describedby="emailHelp" placeholder="Email:" required/>
+          </div>
+
+         <!-- Input Box -->
+            <div class="form-group">
+			    <label for="FormControlTextarea"></label>
+				<textarea class="form-control rounded-0" name="message" id="message" rows="3" placeholder="Send Us A Message!" required></textarea>
+			</div>
+
+            <!-- Send Button -->
+            <div class="send-btn">
+			<button type="submit" class="btn-outline-secondary">Send!</button>
+			</div>
+        </form>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %} 

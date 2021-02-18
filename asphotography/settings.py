@@ -43,6 +43,11 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'about',
+    'contact',
+
+    #Django additional apps
+    'widget_tweaks',
+    'phone_field',
 ]
 
 MIDDLEWARE = [
