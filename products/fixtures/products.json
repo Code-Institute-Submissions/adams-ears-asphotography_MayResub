@@ -1,0 +1,91 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "aa000001",
+      "name": "Abandonded",
+      "description": "Shot on 35mm, Avaliable in various sizes",
+      "price": 14.99,
+      "image": "Abandoned.jpg"
+    }
+  },
+   {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "aa000002",
+      "name": "Deadwood",
+      "description": "Shot on 35mm, Avaliable in various sizes",
+      "price": 14.99,
+      "image": "Deadwood.jpg"
+    }
+  },
+   {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "aa000003",
+      "name": "Home Again",
+      "description": "Shot on 35mm, Avaliable in various sizes",
+      "price": 14.99,
+      "image": "Homeagain.jpg"
+    }
+  },
+     {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "aa000004",
+      "name": "Autumn Leaves",
+      "description": "Shot on 35mm, Avaliable in various sizes",
+      "price": 14.99,
+      "image": "Autumnleaves.jpg"
+    }
+  },
+      {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "aa000005",
+      "name": "Sleepy Hollow",
+      "description": "Shot on 35mm, Avaliable in various sizes",
+      "price": 14.99,
+      "image": "untitled-11.jpg"
+    }
+  },
+    {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "aa000006",
+      "name": "Tree Valley",
+      "description": "Shot on 35mm, Avaliable in various sizes",
+      "price": 14.99,
+      "image": "untitled-4.jpg"
+    }
+  },
+     {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "aa000007",
+      "name": "Frozen Wood",
+      "description": "Shot on 35mm, Avaliable in various sizes",
+      "price": 14.99,
+      "image": "untitled-5.jpg"
+    }
+  },
+    {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "aa000008",
+      "name": "The Long Road",
+      "description": "Shot on 35mm, Avaliable in various sizes",
+      "price": 14.99,
+      "image": "untitled-6.jpg"
+    }
+  }
+]
+

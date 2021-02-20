@@ -44,10 +44,8 @@ INSTALLED_APPS = [
     'home',
     'about',
     'contact',
+    'products',
 
-    #Django additional apps
-    'widget_tweaks',
-    'phone_field',
 ]
 
 MIDDLEWARE = [
