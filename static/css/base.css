@@ -22,6 +22,12 @@ body{
     padding: 25px 5px 0px;
 }
 
+/* Buttons */
+.btn-dark, .btn-success{
+    padding: 3px;
+    font-size: 1em;
+}
+
 /* Logo */
 .logo-row{
     padding-top: 20px;
@@ -93,6 +99,11 @@ body{
 
 .card-img-top{
     max-height: 400px;
+}
+
+.prod-info{
+    border: 3px solid black;
+    color: black;
 }
 
 
