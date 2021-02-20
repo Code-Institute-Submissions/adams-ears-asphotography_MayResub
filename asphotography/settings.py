@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'about',
     'contact',
     'products',
+    'basket',
 
 ]
 

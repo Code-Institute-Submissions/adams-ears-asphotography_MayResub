@@ -41,7 +41,9 @@
         <a class="btn fab fa-facebook" href="https://www.facebook.com/searsy1" role="button" target="_blank"></a>
           <div class="row g-0 logo-row">
               <!--Image-->
-            <img src="/media/asplogo.jpg" alt="asphotography logo" id="logo" class="mx-auto d-block" ><a href="{% url 'about' %}"></a>
+              
+            <img src="/media/asplogo.jpg" alt="asphotography logo" id="logo" class="mx-auto d-block" >
+          
         </div>
 
         <!--Navbar-->
@@ -90,7 +92,7 @@
           </div>
         </li>
         <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_basket' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-basket fa-lg"></i></div>
                                 <p class="my-0">
