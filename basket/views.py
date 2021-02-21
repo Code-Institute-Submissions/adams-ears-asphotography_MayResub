@@ -12,7 +12,7 @@ def add_to_basket(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    size = request.POST['size']
+    size = request.POST.get('product_size')
     basket = request.session.get('basket', {})
 
     if size:
