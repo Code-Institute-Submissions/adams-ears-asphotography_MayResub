@@ -4,7 +4,7 @@
 {% block content %}
 <div class="row">
             <div class="product-container col-10 offset-1">
-                <div class="row mt-4 mb-2"></div>
+                <div class="row mt-1 mb-2"></div>
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pb-3">
@@ -19,17 +19,21 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <h3 class="mb-0">{{ product.name }}</h3>
+                                    <p class="mb-0">{{ product.name }}</p>
                                 </div>
                                 <div class="card-footer bg-white">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold pb-2">£{{ product.price }}</p> 
-                                            <a href="#" class="btn btn-success">Add To Basket</a> 
+                                            <p class="lead mb-0 text-left font-weight-bold pb-2">£{{ product.price }}</p>
+                                            <a href="#" class="btn btn-success" method=>Add To Basket</a>   
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>     
                         </div>
-    {% endfor %}
-{% endblock %} 
+                     {% endfor %}
+                </div>
+            </div>
+        </div>     
+{% endblock %}
+    
