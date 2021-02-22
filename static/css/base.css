@@ -16,6 +16,11 @@ body{
   margin: 6px;
 
 }
+
+.remove-item{
+    cursor: pointer;
+}
+
 /* Social Media */
 
 .btn{

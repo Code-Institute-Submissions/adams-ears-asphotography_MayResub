@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load basket_tools %}
 
 {% block content %}
 
@@ -14,7 +15,7 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-4 ">
+        <div class="col-12 col-md-6  offset-lg-3 ">
             {% if basket_items %}
                 <div class="table-responsive rounded">
                     <table class="table table-sm table-borderless">
@@ -41,10 +42,12 @@
                                     <p class="my-0">£{{ item.product.price }}</p>
                                 </td>
                                    <td class="py-3 w-20">
-                                    <p class="my-0">{{ item.product.quantity}}</p>
+                                    <p class="my-0">{{ item.quantity}}</p>
+                                                                      
                                 </td>
                                    <td class="py-3">
-                                    <p class="my-0">£{{ item.product.price }}</p>
+                                    <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -93,3 +96,25 @@
 
 
 {% endblock %} 
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+
+// Remove item and reload on click
+
+$('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('size');
+        var url = `/basket/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+
+</script>
+{% endblock %}
