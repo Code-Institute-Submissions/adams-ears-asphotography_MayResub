@@ -15,7 +15,7 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-md-6  offset-lg-3 ">
+        <div class="col-12 col-md-6 offset-md-3 offset-lg-3 ">
             {% if basket_items %}
                 <div class="table-responsive rounded">
                     <table class="table table-sm table-borderless">
@@ -71,7 +71,7 @@
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="" class="btn btn-success">
+                                    <a href="{% url 'checkout' %}" class="btn btn-success">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
