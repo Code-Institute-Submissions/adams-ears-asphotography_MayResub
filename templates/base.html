@@ -52,29 +52,29 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse text-center mt-1" id="navbarSupportedContent">
       
       <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
+          <a class="nav-link active bg-white border border-dark " aria-current="page" href="{% url 'about' %}">About</a>
         </li>
             <div class="vl"></div>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Services</a>
+          <a class="nav-link active bg-white border border-dark" aria-current="page" href="#">Services</a>
         </li>
             <div class="vl"></div>
          <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Contact</a>
+          <a class="nav-link active bg-white border border-dark" aria-current="page" href="#">Contact</a>
         </li>
             <div class="vl"></div>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'products' %}">Shop</a>
+          <a class="nav-link active bg-white border border-dark" aria-current="page" href="{% url 'products' %}">Shop</a>
         </li>
             <div class="vl"></div>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-black bg-white border border-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             My Account
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -92,7 +92,7 @@
           </div>
         </li>
         <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-dark border border-danger font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_basket' %}">
+                        <a class="{% if grand_total %}text-dark border border-danger bg-white font-weight-bold{% else %}text-black bg-white border border-dark{% endif %} nav-link" href="{% url 'view_basket' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-basket fa-lg"></i></div>
                                 <p class="my-0">
