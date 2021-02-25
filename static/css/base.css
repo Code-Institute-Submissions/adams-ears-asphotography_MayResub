@@ -47,7 +47,7 @@ body{
 
 #logo{
     object-fit: contain;
-    border: 3px solid black;
+    border: 2px solid black;
     width:auto;
    
 }
@@ -57,7 +57,7 @@ body{
 .sub-head{
     background-color: #808080;
     color: white;
-    border: 3px solid black;
+    border: 2px solid black;
     text-align: center;
 }
 
@@ -138,6 +138,13 @@ body{
     color: black;
 }
 
+.order, .order-confirmation-wrapper{
+    font-weight: 600;
+    font-size: large;
+}
+
+.order-confirmation-wrapper
+
 /* Media Query */
 
 @media (max-width: 991px) {
@@ -146,5 +153,10 @@ body{
 }
 .nav-container{
     width: 1170px;
+}
+
+.bas-con{
+    text-align: center;
+
 }
 }
