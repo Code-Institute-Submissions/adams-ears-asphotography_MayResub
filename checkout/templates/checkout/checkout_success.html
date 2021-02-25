@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container bas-con">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-4 offset-sm-3 pt-3 ">
+            <h3 class="text-uppercase mb-4 p-2 sub-head bg-success">Order Complete
+                <i class="fas fa-check fa-lg"></i>
+            </h3>
+            <p>You will find your order information below. 
+                A confirmation email will be to <strong>{{ order.email }}</strong></p>
+        </div>
+    </div>
+
+    <div class="row">
+       <div class="class col-12 col-lg-7">
+
+       </div>
+    </div>
+</div>
+{% endblock %} 
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}
+
+
+
