@@ -63,11 +63,6 @@ body{
 
 /* Nav Bar */
 
-.vl{
-  border-left: 3px solid black;
-  height: 40px;
-}
-
 .nav-container{
     width: auto;
     padding-top: inherit;
@@ -78,6 +73,9 @@ body{
     color: black;
 }
 
+.basket{
+    margin-left: 5px;
+}
 /* About */
 
 .portrow{
@@ -143,14 +141,13 @@ body{
     font-size: large;
 }
 
-.order-confirmation-wrapper
+
 
 /* Media Query */
 
 @media (max-width: 991px) {
-.vl{
-   display: none; 
-}
+
+
 .nav-container{
     width: 1170px;
 }
@@ -158,5 +155,4 @@ body{
 .bas-con{
     text-align: center;
 
-}
-}
+}}

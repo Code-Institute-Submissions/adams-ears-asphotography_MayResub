@@ -26,6 +26,9 @@
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold pb-2">£{{ product.price }}</p>   
                                         </div>
+                                         <a href="{% url 'product_info' product.id %}" class="btn btn-dark bg-info">
+                                    <span>Full Details</span> 
+                                </a>
                                     </div>
                                 </div>
                             </div>     
