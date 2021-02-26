@@ -29,7 +29,7 @@ body{
 }
 
 /* Buttons */
-.btn-dark, .btn-success{
+.btn-dark, .btn-success, .btn-danger{
     padding: 5px;
     font-size: 1em;
     text-align: center;
@@ -156,3 +156,23 @@ body{
     text-align: center;
 
 }}
+
+
+.allauth-form-inner-content p {
+   
+    color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    margin-bottom: 1.5em;
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
