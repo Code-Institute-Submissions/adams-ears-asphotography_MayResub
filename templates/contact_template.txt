@@ -1,0 +1,14 @@
+Contact Name:
+{{ full_name }}
+
+Email:
+{{ email }}
+
+Phone Number
+{{ phone_number }}
+
+Service Requested
+{{ service }}
+
+Content:
+{{ enquiries }}

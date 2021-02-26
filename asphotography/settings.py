@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'basket',
     'checkout',
     'profiles',
+    'services',
 
     # other
     'crispy_forms',
@@ -182,4 +183,11 @@ STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+
+# Emails
+
 DEFAULT_FROM_EMAIL = 'adamsearsphotography@gmail.com'
+EMAIL_HOST_USER = 'keybeatsgame@gmail.com'
+EMAIL_HOST_PASSWORD = 'KeyBeats123'
+EMAIL_USE_TLS = False
+EMAIL_PORT = 1025

@@ -1,0 +1,15 @@
+.fieldset-label{
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+}
+
+.form-group{
+    margin-top: 10px;
+    
+}
+
+.form-control{
+    border: 2px solid #000;
+}
