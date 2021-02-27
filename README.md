@@ -1,4 +1,4 @@
- ![](https://github.com/adams-ears/Reviewsic/blob/master/static/images/mockup.png)
+ ![]()
 
 # AS Photography
 [Live Site]()
