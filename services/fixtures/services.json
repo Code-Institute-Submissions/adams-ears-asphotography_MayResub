@@ -1,0 +1,32 @@
+ [ 
+  {
+    "pk": 1,
+    "model": "services.services",
+    "fields": {
+      "name": "Portrait",
+      "description": "Mostly shot on film for a warm old school feel. Animals and Humans whatever you love! click on the button below to find out more!",
+      "image": "dad.jpg"
+      
+   }
+  },   
+   {
+    "pk": 2,
+    "model": "services.services",
+    "fields": {
+      "name": "Vehicles",
+      "description": "Can shoot on either SLR or DSLR, traditional and modern feels. All vehicles from big to small, fast to slow! click on the button to find out more!",
+      "image": "Faceon.jpg"
+      
+    }
+  },
+    {
+    "pk": 3,
+    "model": "services.services",
+    "fields": {
+      "name": "Property",
+      "description": "Professional property photography, to tell the story of your home! Lifestyle shots and more! click on the button to find out more!",
+      "image": "house1.jpg"
+     
+    }
+  }
+]
