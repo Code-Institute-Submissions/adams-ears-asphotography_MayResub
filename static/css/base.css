@@ -124,6 +124,24 @@ body{
     color: black;
 }
 
+.sub-label{
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+}
+
+.form-group{
+    color: #000; 
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-control{
+    border: 2px solid black;
+    border-radius: 0;
+}
+
 /* Basket */
 .bas-con{
     background-color: white;
