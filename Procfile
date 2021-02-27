@@ -1,1 +1,1 @@
-web: gunicorn asphotography:wsgi:application
+web: gunicorn asphotography.wsgi:application
