@@ -122,6 +122,10 @@ Various different technologies have been used throughout my project, they are as
 - **Django** is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
 - **Stripe** is a payment processing platform.
 - **Heroku** Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+- **AWS**  allows you to run web and application servers in the cloud to host dynamic websites.
+- **S3** Amazon S3 is a service offered by Amazon Web Services that provides object storage through a web service interface.
+
+
 
 
 ## Testing <a name="test"></a>
