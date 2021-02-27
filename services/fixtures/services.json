@@ -5,8 +5,8 @@
     "fields": {
       "name": "Portrait",
       "description": "Mostly shot on film for a warm old school feel. Animals and Humans whatever you love! click on the button below to find out more!",
+      "info": "1 Hour Session £60, 2 Hour Session - £150, 4+ hours £300, Please use contact form to discuss requirements",
       "image": "dad.jpg"
-      
    }
   },   
    {
@@ -15,7 +15,9 @@
     "fields": {
       "name": "Vehicles",
       "description": "Can shoot on either SLR or DSLR, traditional and modern feels. All vehicles from big to small, fast to slow! click on the button to find out more!",
+      "info": "1 Hour Session £60, 2 Hour Session - £150, 4+ hours £300, Please use contact form to discuss requirements",
       "image": "Faceon.jpg"
+      
       
     }
   },
@@ -25,8 +27,20 @@
     "fields": {
       "name": "Property",
       "description": "Professional property photography, to tell the story of your home! Lifestyle shots and more! click on the button to find out more!",
+      "info": "1 Hour Session £60, 2 Hour Session - £150, 4+ hours £300, Please use contact form to discuss requirements",
       "image": "house1.jpg"
      
+     
+    }
+  },
+  {
+    "pk": 4,
+    "model": "services.services",
+    "fields": {
+      "name": "Events",
+      "description": "From festivals to weddings, shooting events is great fun! using either film stock or digital its all up to you! choose how you want to remember the party! Click on the button below to find out more",
+      "info": "1 Hour Session £60, 2 Hour Session - £150, 4+ hours £300, Please use contact form to discuss requirements",
+      "image": "events1.jpg"
     }
   }
 ]
