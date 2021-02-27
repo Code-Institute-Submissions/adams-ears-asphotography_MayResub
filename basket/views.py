@@ -12,7 +12,9 @@ def add_to_basket(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    size = request.POST.get('product_size')
+    size = None
+    if 'product_size' in request.POST:
+        size = request.POST['product_size']
     basket = request.session.get('basket', {})
 
     if size:
@@ -25,7 +27,7 @@ def add_to_basket(request, item_id):
             basket[item_id] = {'items_by_size': {size: quantity}}
 
     if item_id in list(basket.keys()):
-        basket[item_id] += quantity
+        basket[item_id] = quantity
     else:
         basket[item_id] = quantity
     request.session['basket'] = basket
@@ -52,4 +54,5 @@ def remove_from_basket(request, item_id):
         return HttpResponse(status=200)
 
     except Exception as e:
+
         return HttpResponse(status=500)
