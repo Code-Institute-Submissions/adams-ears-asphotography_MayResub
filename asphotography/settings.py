@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 
 
+
 from pathlib import Path
 import dj_database_url
 
@@ -186,12 +187,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-DEFAULT_FROM_EMAIL = 'adamsearsphotography@gmail.com'
-EMAIL_HOST_USER = 'keybeatsgame@gmail.com'
-EMAIL_HOST_PASSWORD = 'KeyBeats123'
-EMAIL_USE_TLS = False
-EMAIL_PORT = 1025
-
 if 'USE_AWS' in os.environ:
 
     AWS_S3_OBJECT_PARAMETERS = {
@@ -215,15 +210,17 @@ if 'USE_AWS' in os.environ:
 
 # Stripe
 
-if 'STRIPE' in os.environ:
-
-    FREE_DELIVERY_THRESHOLD = 50
-    STANDARD_DELIVERY_PERCENTAGE = 10
-    STRIPE_CURRENCY = 'gbp'
-    STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
-    STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
-    STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
+FREE_DELIVERY_THRESHOLD = 50
+STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 # Emails
 
-
+DEFAULT_FROM_EMAIL = 'adamsearsphotography@gmail.com'
+EMAIL_HOST_USER = 'keybeatsgame@gmail.com'
+EMAIL_HOST_PASSWORD = 'KeyBeats123'
+EMAIL_USE_TLS = False
+EMAIL_PORT = 1025
