@@ -148,7 +148,7 @@ Results from CSS validator - No Errors found.
 
 ### Js Validatior
 All Syntax Valid
-![JS Validation]()
+![JS Validation](https://github.com/adams-ears/asphotography/blob/master/wireframes/JS.jpg)
 
 ### Python Validatior
 Majority of Syntax is Valid, Migration and core django settings left untouched.
