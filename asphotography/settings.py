@@ -186,6 +186,12 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+DEFAULT_FROM_EMAIL = 'adamsearsphotography@gmail.com'
+EMAIL_HOST_USER = 'keybeatsgame@gmail.com'
+EMAIL_HOST_PASSWORD = 'KeyBeats123'
+EMAIL_USE_TLS = False
+EMAIL_PORT = 1025
+
 if 'USE_AWS' in os.environ:
 
     AWS_S3_OBJECT_PARAMETERS = {
@@ -209,17 +215,15 @@ if 'USE_AWS' in os.environ:
 
 # Stripe
 
-FREE_DELIVERY_THRESHOLD = 50
-STANDARD_DELIVERY_PERCENTAGE = 10
-STRIPE_CURRENCY = 'gbp'
-STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
-STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
-STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
+if 'STRIPE' in os.environ:
+
+    FREE_DELIVERY_THRESHOLD = 50
+    STANDARD_DELIVERY_PERCENTAGE = 10
+    STRIPE_CURRENCY = 'gbp'
+    STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+    STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
+    STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
 # Emails
 
-DEFAULT_FROM_EMAIL = 'adamsearsphotography@gmail.com'
-EMAIL_HOST_USER = 'keybeatsgame@gmail.com'
-EMAIL_HOST_PASSWORD = 'KeyBeats123'
-EMAIL_USE_TLS = False
-EMAIL_PORT = 1025
+
