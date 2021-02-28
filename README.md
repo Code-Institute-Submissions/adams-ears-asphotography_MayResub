@@ -1,7 +1,7 @@
- ![]()
+ ![](https://github.com/adams-ears/asphotography/blob/master/wireframes/mockup.jpg)
 
 # AS Photography
-[Live Site]()
+[Live Site](https://asphotography.herokuapp.com/)
 This Project has been designed as a web based application for a photographer to promote work as well as take bookings and include a shopping area for prints or web vouchers. 
 The **AS Photography** project will highlight what I have learnt across the full course using the full stack. HTML, CSS, Javascript with the 
 addition of the backend language Python and using framework Django to create and develop a fully functioning , responsive web application.
@@ -16,7 +16,11 @@ addition of the backend language Python and using framework Django to create and
        (a) [Development Modification](#devmod)
 4. [Technologies](#tech)
 5. [Testing](#test)
-6. [Deployment](#deploy)
+6. [Deployment](#deploy)\
+       - (a) [Step 1- Heroku](#Heroku)\
+       - (b) [Step 2 & 3 - AWS](#AWS)\
+       - (c) [Step 4 - Django and S3 Connection](#Django)\
+       - (d) [Step 5 & 6 - Media & Stripe](#Media)
 7. [Credits](#credit)
 
 
@@ -53,7 +57,7 @@ The six sub pages and purpose are as follows:
 - **Products:**  The product page will only be available to admins or the website owner. This will a subcategory from the accounts page, giving the admin 
                  a page where products can be added to the shop, including Name, Value, Product Image and Description.
 
-![Page Structure]()
+![Page Structure](https://github.com/adams-ears/asphotography/blob/master/wireframes/Site%20Map%20jpeg.jpg)
 
 ## UX <a name="ux"></a>
 This site brings the user to sign up and  easily navigate through from landing page to uploading reviews, seeing thier own dedicated profile and reading reviews.  
@@ -76,9 +80,9 @@ The users needs:
 
 The links below will take you to a PDF of each of the wireframes i have created for this project.
 
-[Desktop Wireframe]()
+[Desktop Wireframe](https://github.com/adams-ears/asphotography/blob/master/wireframes/Desktop%20MS4%20frame.pdf)
 
-[Mobile Wireframe]()
+[Mobile Wireframe](https://github.com/adams-ears/asphotography/blob/master/wireframes/Mobile%20MS4%20frame.pdf)
 
 
 ## Features <a name="features"></a>
@@ -136,11 +140,11 @@ Various different technologies have been used throughout my project, they are as
 
 ### HTML Validatior
 All HTML Valid - Errors found are from Bootstrap classes:
-![HTML Validation]()
+![HTML Validation](https://github.com/adams-ears/asphotography/blob/master/wireframes/HTML.jpg)
 
 ### CSS Validatior
 Results from CSS validator - No Errors found.
-![CSS Validation]()
+![CSS Validation](https://github.com/adams-ears/asphotography/blob/master/wireframes/CSS.jpg)
 
 ### Js Validatior
 All Syntax Valid
@@ -159,14 +163,12 @@ Browser compatability was tested across five different web browsers and these ar
 - Safari
 - Opera
 
-The game was desinged using Google Chrome however functions on all browsers mentioned above. 
-
-### Other testing
-
+The web application was desinged using Google Chrome however functions on all browsers mentioned above. 
 
 ## Deployment <a name="deploy"></a>
-**Step 1 - Heroku**
-In order to successfully publish the website to **Heroku** use the following steps :
+### Step 1 - Heroku <a name="Heroku"></a>
+
+- In order to successfully publish the website to **Heroku** use the following steps :
 - Head to the [Heroku](heroku.com) website and signup 
 - Once Signed up Select **Create New App** from the New dropdown menu
 - Fill in **App-name box**  and select **Region**
@@ -199,7 +201,7 @@ In order to successfully publish the website to **Heroku** use the following ste
 - Set debug to be true only if varible is in environment 
 - Push changes
 
-**Step 2 - AWS(S3)**
+### Step 2 - AWS(S3) <a name="AWS"></a>
 - Follow steps to make AWS account
 - Choose which storage system to use from services, in this case S3 was chosen
 - Create bucket, give it **Name**, select **Region** closet to you
@@ -219,7 +221,7 @@ In order to successfully publish the website to **Heroku** use the following ste
 - Head to **Access Control List**
 - Check box for everyone under **Public Access**
 
-**Step 3 - AWS(IAM)**
+### Step 3 - AWS(IAM)
 - Open IAM
 - Select **Group** and **Create New Group**
 - Name Group and follow the end to **Create**
@@ -235,7 +237,7 @@ In order to successfully publish the website to **Heroku** use the following ste
 - Click to end and **Create**
 - Download and **Save CSV file!!**
 
-**Step 4 - Django and S3 Connection**
+### Step 4 - Django and S3 Connection <a name="Django"></a>
 - Install Boto3 and Django-storages and freeze
 - Add **Storages** to install apps
 - Add if statement USE_AWS to communicate with heroku config variables to select correct bucket
@@ -255,11 +257,11 @@ In order to successfully publish the website to **Heroku** use the following ste
 - Check build log that all static files has been collected successfully
 - Head to **S3** to check for static folder with static files
 
-**Step 5 - Media Files**
+### Step 5 - Media Files <a name="Media"></a>
 - Head to **S3** and create a new folder called **Media**
 - Grant public read access and Upload files into folder
 
-**Step 6 - Stripe**
+### Step 6 - Stripe
 - Head to Stripe
 - Grab API keys
 - Add to Heroku config variables
@@ -281,8 +283,8 @@ All photos taken by Adam Sears
 
 ### Acknowledgements
 This has been a great journy and learning experience, i feel very proud to have gotten this far with the support of my mentor Jonathan Munz. His endless
-support throught the course has propelled me to where i am today, being able to problem solve and think logically about the next step but mainly keeping calm and knowing
+support throughout the course has propelled me to where i am today, being able to problem solve and think logically about the next step but mainly keeping calm and knowing
 when to step away for five minutes. I would also like to thank all of the tutors who have assisted me throught the course and the slack community for 
 always being there for anyone who needs it!. 
 
-Finally i would like thank my partner for always being there and pushing me to succeed throught the course! 
+Finally i would like thank my partner for always being there and pushing me to succeed throughout the course! 
