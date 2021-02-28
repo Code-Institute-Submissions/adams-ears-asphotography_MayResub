@@ -131,7 +131,7 @@ Various different technologies have been used throughout my project, they are as
 ## Testing <a name="test"></a>
 
 ### HTML Validatior
-All HTML Valid - No Errors Found:
+All HTML Valid - Errors found are from Bootstrap classes:
 ![HTML Validation]()
 
 ### CSS Validatior
@@ -181,6 +181,7 @@ All design ideas are original content from the developer
 
 
 ### Media
+All photos taken by Adam Sears
 
 
 ### Acknowledgements
