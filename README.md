@@ -102,6 +102,10 @@ Here is a list of the features included on the site. Along with possible additio
 
 
 ### Development Modification <a name="devmod"></a>
+During the development process, i encounted a few hurdles which left me modifying from original design. One major factor was 
+the lack of clarity around the navigation bar, if left without a white background many of the words would be unseen when reducing in size to burger. Another
+large factor was the exclusion of vouchers, i decided to go for a more traditional approach toward the shop to show what i had learnt so far in the course.
+
 
 
 
@@ -143,8 +147,8 @@ All Syntax Valid
 ![JS Validation]()
 
 ### Python Validatior
-All Syntax Valid
-![Python Validation]()
+Majority of Syntax is Valid, Migration and core django settings left untouched.
+
 
 ### Browser Compatability
 Browser compatability was tested across five different web browsers and these are:
@@ -161,18 +165,109 @@ The game was desinged using Google Chrome however functions on all browsers ment
 
 
 ## Deployment <a name="deploy"></a>
+**Step 1 - Heroku**
 In order to successfully publish the website to **Heroku** use the following steps :
 - Head to the [Heroku](heroku.com) website and signup 
 - Once Signed up Select **Create New App** from the New dropdown menu
 - Fill in **App-name box**  and select **Region**
+- For this project Postgres was selected from **Resources**
+- Head back to gitpod and install dj_database_url and psycopg2-binary then freeze to requirements.txt
+- Head to settings.py and import dj_database_url
+- Comment out original database and replace with dj_database_url.parse(**fill with database url from heroku config variables settings**)
+- Run Migrations to new database
+- Load in fixtures
+- Create superuser
+- Remove heroku database config, uncomment default database and commit changes
+- Now add if statement to connect to heroku environment varibles and else original
+- Add gunicorn as your webserver and freeze to requirements.txt
+- Make Procfile to tell heroku to make a web dyno whic will run gunicorn and serve django
+- Login to heroku in the terminal
+- Temporarily disable collectstatic using DISABLE_COLLECTSTATIC=1 --app **project name**
+- Add host name to **Allowed Hosts** in settings.py
+- Add, commit and push changes to Github
+- Initialise heroku git remote by using heroku git:remote -a **project name**
+- Then push to heroku using **git push heroku master**
+- Check app has been deployed through link
+- Now set to automatically deploy to heroku when you push to Github
 - Once on homepage select **Connect to Github** in the **Deployment Method**
 - Make sure your Github name is showing and search for the repo name in the search box
 - Once found click **Connect**
+- **enable automatic deploys**
 **Your site will now be published at** https://asphotography.herokuapp.com/.
+- Next look up django key gen and add key to heroku config variables
+- Go back to settings.py and replace SECRET_KEY setting with a call to get it from the environment
+- Set debug to be true only if varible is in environment 
+- Push changes
 
--Environment variables can be amended in settings from main page and then select Reveal Config Vars
+**Step 2 - AWS(S3)**
+- Follow steps to make AWS account
+- Choose which storage system to use from services, in this case S3 was chosen
+- Create bucket, give it **Name**, select **Region** closet to you
+- Uncheck all public access and acknowledge
+- Create bucket
+- Select bucket and go to properties tab
+- Choose **Static webiste hosting**
+- Check box **Use bucket to host a website**
+- Fill in default values and clock save
+- Go to **Permissons Tab**
+- Fill in **CORS configurations**
+- Go to **Policy Tab** and click generate Policy
+- Fill in form accordinly
+- Grab **ARN** from bucket permissions tab
+- Add statement, generate policy
+- Copy policy into **Bucket Policy** editor
+- Head to **Access Control List**
+- Check box for everyone under **Public Access**
 
+**Step 3 - AWS(IAM)**
+- Open IAM
+- Select **Group** and **Create New Group**
+- Name Group and follow the end to **Create**
+- Click **Policies** and **Create Policy**
+- Go to **Json** tab and import relevant policy
+- Include bucket **ARN** from S3 in JSON file under **Resource**
+- Click **Review Policy** and give **Name** and **Description** then **Create**
+- Head to **Groups** and click your Group
+- Click **Attach Policy**, search and select policy you just created and **Attach**
+- Head to **Users**
+- Add User and give **Programmatic Access**
+- Add User to Group
+- Click to end and **Create**
+- Download and **Save CSV file!!**
 
+**Step 4 - Django and S3 Connection**
+- Install Boto3 and Django-storages and freeze
+- Add **Storages** to install apps
+- Add if statement USE_AWS to communicate with heroku config variables to select correct bucket
+- In statement add **AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME, AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY**
+- Head to heroku and add these to config varibles make sure the keys stay secret!! (both keys can be found in CSV)
+- Add **USE_AWS = True** and remove **DISABLE_COLLECTSTATIC** from config variables
+- Next in if statement in settings.py add **AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazon.com** to tell django where the static files are coming from
+- Create a file called **custom_storages.py** and import settings and **S3BotoStorage from storages.backends.s3.boto3**
+- Create a custom class which inherits **S3BotoStorage**
+- Tell it where to store static files in settings
+- Copy to second class for media files
+- Go back to settings.py
+- Tell it for static file storage to use the file thats just been create and the location is a file called **static**
+- Repeat for Media files
+- Override static and media urls with **Custom Domain and New Location**
+- Add, Commmit and Push will will trigger an auto deply to Heroku 
+- Check build log that all static files has been collected successfully
+- Head to **S3** to check for static folder with static files
+
+**Step 5 - Media Files**
+- Head to **S3** and create a new folder called **Media**
+- Grant public read access and Upload files into folder
+
+**Step 6 - Stripe**
+- Head to Stripe
+- Grab API keys
+- Add to Heroku config variables
+- Go back to **Stripe**, slect **Webhooks** and **Add Endpoint**
+- Add **URL** for Heroku app followed by /checkout/wh/
+- Recieve all events and **Add Endpoint**
+- Reveal webhook sing in secret and add to heroku congif variables
+- Make sure they match settings.py
 
 ## Credits <a name="credit"></a>
 
@@ -185,4 +280,9 @@ All photos taken by Adam Sears
 
 
 ### Acknowledgements
+This has been a great journy and learning experience, i feel very proud to have gotten this far with the support of my mentor Jonathan Munz. His endless
+support throught the course has propelled me to where i am today, being able to problem solve and think logically about the next step but mainly keeping calm and knowing
+when to step away for five minutes. I would also like to thank all of the tutors who have assisted me throught the course and the slack community for 
+always being there for anyone who needs it!. 
 
+Finally i would like thank my partner for always being there and pushing me to succeed throught the course! 
