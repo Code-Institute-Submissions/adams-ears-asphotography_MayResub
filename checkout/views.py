@@ -116,17 +116,16 @@ def checkout(request):
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
-
+            template = 'checkout/checkout.html'
+            context = {
+                'order_form': order_form,
+                'stripe_public_key': stripe_public_key,
+                'client_secret': intent.client_secret,
+                }
+            return render(request, template, context)
     if not stripe_public_key:
 
-        template = 'checkout/checkout.html'
-        context = {
-            'order_form': order_form,
-            'stripe_public_key': stripe_public_key,
-            'client_secret': intent.client_secret,
-        }
-
-    return render(request, template, context)
+        return render(request, template, context)
 
 
 def checkout_success(request, order_number):

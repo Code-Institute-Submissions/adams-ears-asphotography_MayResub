@@ -168,9 +168,11 @@ In order to successfully publish the website to **Heroku** use the following ste
 - Once on homepage select **Connect to Github** in the **Deployment Method**
 - Make sure your Github name is showing and search for the repo name in the search box
 - Once found click **Connect**
-**Your site will now be published at** https://reviewsic-ms3.herokuapp.com/.
+**Your site will now be published at** https://asphotography.herokuapp.com/.
 
 -Environment variables can be amended in settings from main page and then select Reveal Config Vars
+
+
 
 ## Credits <a name="credit"></a>
 
