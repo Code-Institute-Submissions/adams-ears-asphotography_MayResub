@@ -117,16 +117,19 @@ def checkout(request):
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
-            template = 'checkout/checkout.html'
-            context = {
-                'order_form': order_form,
-                'stripe_public_key': stripe_public_key,
-                'client_secret': intent.client_secret,
-                }
-            return render(request, template, context)
+
     if not stripe_public_key:
 
-        return render(request, template, context)
+        template = 'checkout/checkout.html'
+    else:
+        template = 'checkout/checkout.html'
+        context = {
+            'order_form': order_form,
+            'stripe_public_key': stripe_public_key,
+            'client_secret': intent.client_secret,
+        }
+
+    return render(request, template, context)
 
 
 def checkout_success(request, order_number):
@@ -155,7 +158,7 @@ def checkout_success(request, order_number):
             }
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
-                user_profile_form.save()
+               user_profile_form.save()
 
     if 'basket' in request.session:
         del request.session['basket']
