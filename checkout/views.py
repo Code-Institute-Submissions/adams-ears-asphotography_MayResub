@@ -67,7 +67,8 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, quantity\
+                                in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -158,7 +159,7 @@ def checkout_success(request, order_number):
             }
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
-               user_profile_form.save()
+                user_profile_form.save()
 
     if 'basket' in request.session:
         del request.session['basket']

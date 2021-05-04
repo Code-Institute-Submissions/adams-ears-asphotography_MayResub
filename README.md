@@ -9,6 +9,7 @@ addition of the backend language Python and using framework Django to create and
 ## Contents 
 1. [Project](#project)
 2. [UX](#ux)\
+       - (a) [Design Choices](#DesignChoices)\
        - (a) [User Stories](#UserStories)\
        - (b) [Admin Stories](#adminstories)\
        - (c) [Wireframes](#wireframes)
@@ -60,7 +61,13 @@ The six sub pages and purpose are as follows:
 ![Page Structure](https://github.com/adams-ears/asphotography/blob/master/wireframes/Site%20Map%20jpeg.jpg)
 
 ## UX <a name="ux"></a>
-This site brings the user to sign up and  easily navigate through from landing page to uploading reviews, seeing thier own dedicated profile and reading reviews.  
+This site brings the user to sign up and  easily navigate through from landing page to uploading reviews, seeing thier own dedicated profile and reading reviews. 
+### Design Choices <a name="DesignChoices"></a>
+My inital design choices for this site can be seen in the wireframes found below. The idea of having a picture as a background with the solid colour boxes atop
+was chosen due to being able to showcase more photography from the artist and keep the information clear and readable. This was also a strong factor for the font choice, as
+it had to fit with the style of the site but also be able to be clear and concise. One factor which i felt wasn't required for this site right now is the implementaion of a search bar. 
+With all items within the shop being of the same specification a filtering or search system isnt required, this is something
+I would look to use in the future when more products of a wider variety are added or a sales section is added.
 ### User Stories <a name="UserStories"></a>
 The users needs:
 - The user is able to view previous works by photographer in gallery style setting
